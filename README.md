@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/cover.png" alt="AI-Powered Candidate Ranking System Banner" width="100%">
+</p>
+
 # AI-Powered Candidate Ranking System
 
 An AI-powered recruitment system that intelligently ranks candidates using skills, experience, career history, behavioral signals, and recruiter response metrics.
