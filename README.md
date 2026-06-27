@@ -1,32 +1,57 @@
 # AI-Powered Candidate Ranking System
 
-## Overview
+An AI-powered recruitment system that intelligently ranks candidates using skills, experience, career history, behavioral signals, and recruiter response metrics.
 
-The AI-Powered Candidate Ranking System is an intelligent recruitment assistant designed to help recruiters identify the most suitable candidates from large candidate datasets.
+---
 
-Traditional recruitment processes rely heavily on manual resume screening and keyword-based filtering, which are time-consuming and often fail to identify the best candidates. This project uses multiple evaluation factors such as skills, experience, career history, recruiter engagement signals, and recruitability metrics to generate a reliable candidate ranking.
+# Project Preview
 
-The system processes candidate profiles, calculates suitability scores, classifies candidates, and generates a ranked shortlist that recruiters can trust.
+## Project Cover
 
+![Project Cover](assets/cover.png)
+
+## Recruiter Dashboard
+
+![Recruiter Dashboard](assets/dashboard.png)
+
+## Best Candidate Breakdown
+
+![Best Candidate](assets/best_candidate.png)
+
+## Top Ranked Candidates
+
+![Top Candidates](assets/top10_candidates.png)
+
+---
+
+# Overview
+
+The **AI-Powered Candidate Ranking System** is an intelligent recruitment assistant that helps recruiters identify the most suitable candidates from large datasets.
+
+Traditional recruitment relies heavily on manual resume screening and keyword-based filtering, making hiring slow and inconsistent. This project automates candidate evaluation by analyzing multiple factors and generating an explainable AI-based ranking.
+
+The system processes candidate profiles, calculates suitability scores, classifies candidates into different match categories, and generates a ranked shortlist for recruiters.
+
+---
 
 # Problem Statement
 
-Recruiters often need to evaluate thousands of candidate profiles for a single role. Manual screening is slow, inconsistent, and prone to bias.
+Recruiters often need to evaluate thousands of candidate profiles for a single job opening.
 
 Challenges include:
 
-* Large volume of candidate profiles
-* Difficulty identifying relevant experience
-* Lack of insight into candidate engagement
-* Time-consuming shortlisting process
+* Manual resume screening
+* Large candidate datasets
 * Inconsistent hiring decisions
+* Difficulty identifying relevant experience
+* Lack of recruiter engagement insights
+* Time-consuming shortlisting process
 
-This project aims to automate and improve the candidate selection process using AI-driven ranking techniques.
-
+---
 
 # Solution
 
-The system analyzes candidate data and evaluates:
+The system evaluates candidates using multiple AI-inspired scoring factors:
 
 * Current Job Title
 * Years of Experience
@@ -35,142 +60,122 @@ The system analyzes candidate data and evaluates:
 * Behavioral Signals
 * Recruitability Metrics
 
-Based on these factors, candidates are scored, ranked, categorized, and shortlisted for recruiters.
+Based on these factors, candidates are scored, ranked, classified, and recommended.
 
+---
 
 # Key Features
 
-## Candidate Ranking
+* AI-Based Candidate Ranking
+* Multi-Factor Scoring Engine
+* Skill Matching
+* Experience Analysis
+* Career History Evaluation
+* Behavioral Signal Analysis
+* Recruitability Score
+* Confidence Score
+* Candidate Comparison
+* Missing Skills Detection
+* Backup Candidate Pool
+* AI Recruiter Recommendation
+* CSV Submission Generator
 
-Ranks candidates according to overall suitability for the target role.
-
-## Skill Matching
-
-Identifies candidates with relevant AI, Machine Learning, Retrieval, Ranking, and Search-related skills.
-
-## Experience Analysis
-
-Evaluates professional experience and assigns scores based on role requirements.
-
-## Career History Analysis
-
-Analyzes project descriptions and previous work experience to identify production-level expertise.
-
-## Behavioral Signal Analysis
-
-Uses recruiter engagement indicators such as:
-
-* Recruiter Response Rate
-* Interview Completion Rate
-* Open-to-Work Status
-* GitHub Activity
-
-## Recruitability Score
-
-Measures the likelihood of successful recruiter engagement.
-
-## Confidence Score
-
-Provides confidence levels for AI recommendations.
-
-## Match Classification
-
-Candidates are categorized as:
-
-* Strong Match
-* Potential Match
-* Weak Match
-* Not Recommended
-
-## Candidate Comparison
-
-Compares top candidates using detailed score breakdowns.
-
-## Missing Skills Analysis
-
-Highlights important skills missing from candidate profiles.
-
-## Backup Candidate Pool
-
-Provides additional qualified candidates as fallback options.
-
-## AI Recruiter Recommendation
-
-Generates final hiring recommendations based on candidate performance.
-
-## CSV Submission Generator
-
-Exports ranked candidates into a submission-ready CSV file.
-
+---
 
 # System Architecture
 
+```text
 Recruiter Requirement
-
-↓
-
+        │
+        ▼
 Candidate Dataset (100,000 Profiles)
-
-↓
-
-Feature Extraction Layer
-
-* Skills
-* Experience
-* Career History
-* Behavioral Signals
-
-↓
-
-Scoring Engine
-
-* Title Score
-* Experience Score
-* Skill Score
-* Career Score
-* Behavioral Score
-* Recruitability Score
-* Penalty Score
-
-↓
-
+        │
+        ▼
+Feature Extraction
+        │
+        ├── Skills
+        ├── Experience
+        ├── Career History
+        └── Behavioral Signals
+        │
+        ▼
+AI Scoring Engine
+        │
+        ├── Title Score
+        ├── Experience Score
+        ├── Skill Score
+        ├── Career Score
+        ├── Behavior Score
+        ├── Recruitability Score
+        └── Penalty Score
+        │
+        ▼
 Ranking Engine
-
-↓
-
+        │
+        ▼
 Candidate Classification
-
-↓
-
+        │
+        ▼
 Top Candidate Selection
-
-↓
-
+        │
+        ▼
 Candidate Comparison
-
-↓
-
+        │
+        ▼
 Missing Skills Analysis
-
-↓
-
+        │
+        ▼
 AI Recruiter Recommendation
-
-↓
-
+        │
+        ▼
 submission.csv
+```
 
+---
 
 # Technologies Used
 
 * Python
 * JSON
 * CSV
-* Data Processing
 * Information Retrieval Concepts
+* AI-Based Scoring
 * Machine Learning Concepts
 
+---
 
+# Folder Structure
+
+```text
+AI-Powered-Candidate-Ranking-System/
+│
+├── assets/
+│   ├── cover.png
+│   ├── dashboard.png
+│   ├── best_candidate.png
+│   └── top10_candidates.png
+│
+├── data/
+│   └── candidates.jsonl (Not included due to GitHub size limit)
+│
+├── output/
+│
+├── src/
+│   ├── ranker.py
+│   ├── scoring.py
+│   ├── inspect_candidate.py
+│   ├── inspect_top5.py
+│   ├── inspect_top10.py
+│   ├── check_candidate.py
+│   ├── check_top_submission.py
+│   └── test_load.py
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+---
 
 # Sample Output
 
@@ -178,6 +183,7 @@ submission.csv
 
 ```text
 Total Candidates: 100000
+
 Strong Matches: 27
 Potential Matches: 140
 Weak Matches: 257
@@ -187,89 +193,112 @@ Not Recommended: 99576
 ## Best Candidate
 
 ```text
-Candidate ID: CAND_0088025
-Final Score: 119
-Status: Strong Match
-Confidence: 100%
-```
+Candidate ID : CAND_0088025
 
-## Score Breakdown
+Final Score : 119
 
-```text
-Title Score: 24
-Experience Score: 12
-Skill Score: 18
-Career Score: 25
-Behavior Score: 25
-Recruitability Score: 15
-Penalty Score: 0
+Status : Strong Match
+
+Confidence : 100%
 ```
 
 ---
 
 # Project Workflow
 
-1. Load candidate dataset
-2. Extract profile information
-3. Analyze skills and experience
-4. Evaluate career history
-5. Calculate behavioral signals
-6. Compute recruitability score
-7. Generate final score
-8. Classify candidates
-9. Rank candidates
-10. Generate recruiter insights
-11. Export ranked shortlist
+1. Load Candidate Dataset
+2. Extract Candidate Information
+3. Analyze Skills
+4. Evaluate Experience
+5. Analyze Career History
+6. Calculate Behavioral Signals
+7. Compute Recruitability Score
+8. Generate Final Score
+9. Rank Candidates
+10. Classify Candidates
+11. Generate Recruiter Insights
+12. Export submission.csv
 
 ---
 
-# How to Run
+# Installation
 
-### Step 1: Clone or Download the Project
-
-Download the project files or clone the repository.
-
-### Step 2: Open the Project Folder
+Clone the repository:
 
 ```bash
-cd redrob-hackathon
+git clone https://github.com/Bhanu-sri007/AI-Powered-Candidate-Ranking-System.git
 ```
 
-### Step 3: Run the Ranking Engine
+Move into the project:
+
+```bash
+cd AI-Powered-Candidate-Ranking-System
+```
+
+---
+
+# Run the Project
 
 ```bash
 python src/ranker.py
 ```
 
-### Step 4: View Output
+---
 
-Generated output file:
+# Output
+
+The system generates:
 
 ```text
 output/submission.csv
 ```
 
+along with recruiter insights including:
 
+* Recruiter Dashboard
+* Best Candidate Breakdown
+* Candidate Comparison
+* Backup Candidate Pool
+* Top Ranked Candidates
+
+---
+
+# Dataset
+
+The original dataset (`candidates.jsonl`) is **not included** in this repository because it exceeds GitHub's 100 MB file size limit.
+
+Place the dataset inside:
+
+```text
+data/candidates.jsonl
+```
+
+before running the project.
+
+---
 
 # Future Enhancements
 
 * Resume Parsing
-* NLP-Based Job Description Understanding
 * LLM-Based Candidate Evaluation
+* NLP Job Description Matching
 * Skill Gap Recommendations
-* Candidate Improvement Roadmaps
 * Interview Readiness Prediction
-* Real-Time Recruiter Dashboard
-* Web Application Deployment
+* Candidate Roadmaps
+* Explainable AI Dashboard
+* Streamlit Web Application
+* Cloud Deployment
 
+---
 
 # Business Impact
 
 * Reduces recruiter screening effort
 * Improves hiring efficiency
-* Enhances candidate quality
-* Provides explainable AI recommendations
-* Supports large-scale recruitment processes
+* Enables explainable AI recommendations
+* Supports large-scale recruitment
+* Improves candidate quality
+* Reduces manual bias
 
 ---
 
@@ -277,6 +306,8 @@ output/submission.csv
 
 **Bhanusri Dunaboina**
 
-Final Year B.Tech Computer Science and Engineering Student
+Final Year B.Tech – Computer Science and Engineering
 
 Java Full Stack Developer | AI & Machine Learning Enthusiast
+
+GitHub: https://github.com/Bhanu-sri007
